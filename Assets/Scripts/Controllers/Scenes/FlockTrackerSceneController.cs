@@ -1,10 +1,20 @@
+using UnityEngine;
+using Models.Scenes;
+using Views.FlockTracker;
+using Views.General;
+
 namespace Controllers.Scenes
 {
     public class FlockTrackerSceneController : AbstractSceneController
     {
+        [SerializeField] private AddFlockPanel _addFlockPanel;
+        [SerializeField] private FlockTrackerMainPanel _flockTrackerMainPanel;
+        
+        private FlockTrackerSceneModel _model;
+        
         protected override void OnSceneEnable()
         {
-            
+            OpenMainPanel();
         }
 
         protected override void OnSceneStart()
@@ -19,7 +29,7 @@ namespace Controllers.Scenes
 
         protected override void Initialize()
         {
-            
+            _model = new FlockTrackerSceneModel();
         }
 
         protected override void Subscribe()
@@ -30,6 +40,72 @@ namespace Controllers.Scenes
         protected override void Unsubscribe()
         {
             
+        }
+
+        private void OpenAddFlockPanel()
+        {
+            _model.ResetFlock();
+
+            _addFlockPanel.PressBtnAction += OnReceiveAnswerAddFlockPanel;
+            _addFlockPanel.OnInputCountAction += OnChangedCount;
+            _addFlockPanel.OnSelectedBreedAction += OnChangedBreeds;
+            
+            OpenPanel(_addFlockPanel);
+        }
+
+        private void OpenMainPanel()
+        {
+            _flockTrackerMainPanel.PressBtnAction += OnReceiveAnswerMainPanel;
+            
+            _flockTrackerMainPanel.SetInfo(_model.FlockItemModels);
+            
+            OpenPanel(_flockTrackerMainPanel);
+        }
+
+        private void OnReceiveAnswerAddFlockPanel(int answer)
+        {
+            _addFlockPanel.PressBtnAction -= OnReceiveAnswerAddFlockPanel;
+            _addFlockPanel.OnInputCountAction -= OnChangedCount;
+            _addFlockPanel.OnSelectedBreedAction -= OnChangedBreeds;
+            
+            _model.SaveFlock();
+            
+            ClosePanel(_addFlockPanel);
+            OpenMainPanel();
+        }
+
+        private void OnReceiveAnswerMainPanel(int answer)
+        {
+            _flockTrackerMainPanel.PressBtnAction -= OnReceiveAnswerMainPanel;
+
+            switch (answer)
+            {
+                case 0:
+                    break;
+                default:
+                    OpenAddFlockPanel();
+                    break;
+            }
+        }
+
+        private void OnChangedCount(int count)
+        {
+            _model.SetFlockCount(count);
+        }
+
+        private void OnChangedBreeds(int index)
+        {
+            _model.SetFlockBreed(index);
+        }
+
+        private void OpenPanel(PanelView view)
+        {
+            view.Open();
+        }
+
+        private void ClosePanel(PanelView view)
+        {
+            view.Close();
         }
     }
 }

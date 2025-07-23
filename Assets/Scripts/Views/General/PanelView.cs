@@ -33,6 +33,21 @@ namespace Views.General
             }
         }
 
+        public void Open()
+        {
+            SetActive(true);
+        }
+
+        public void Close()
+        {
+            SetActive(false);
+        }
+
+        private void SetActive(bool value)
+        {
+            gameObject.SetActive(value);
+        }
+
         private void Notification(int index)
         {
             PressBtnAction?.Invoke(index);
