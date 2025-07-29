@@ -37,6 +37,11 @@ namespace Models.Scenes
             _flockItemModel.BreedType = (BreedsChickensType)index;
         }
 
+        public void DeleteFlockItem(int index)
+        {
+            _flockItemModels.RemoveAt(index);
+        }
+
         public void SaveFlock()
         {
             _flockItemModels.Add(_flockItemModel);
@@ -55,7 +60,6 @@ namespace Models.Scenes
         {
             if (!File.Exists(FilePath))
             {
-                Debug.LogWarning("No saved flock data found.");
                 return new List<FlockItemModel>();
             }
 

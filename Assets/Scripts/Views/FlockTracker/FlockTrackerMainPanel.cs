@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Models.FlockTracker;
 using UnityEngine;
@@ -12,12 +13,16 @@ namespace Views.FlockTracker
 
         private List<GameObject> _activeObjects;
 
+        public event Action<int> OnPressDeleteBtnAction;
+
         public void SetInfo(List<FlockItemModel> models)
         {
             if (_activeObjects != null)
             {
                 foreach (var activeObject in _activeObjects)
                 {
+                    FlockTrackerItemView view = activeObject.GetComponent<FlockTrackerItemView>();
+                    view.OnPressBtnAction -= OnPressDeleteBtn;
                     Destroy(activeObject);
                 }
                 
@@ -30,6 +35,7 @@ namespace Views.FlockTracker
             {
                 GameObject go = Instantiate(_flockTrackerItemPrefab, _container);
                 FlockTrackerItemView view = go.GetComponent<FlockTrackerItemView>();
+                view.OnPressBtnAction += OnPressDeleteBtn;
                 
                 go.transform.SetSiblingIndex(0);
                 
@@ -37,6 +43,13 @@ namespace Views.FlockTracker
                 
                 view.SetInfo(model._count, model.BreedType.ToString());
             }
+        }
+
+        private void OnPressDeleteBtn(FlockTrackerItemView view)
+        {
+            int index = _activeObjects.IndexOf(view.gameObject);
+            
+            OnPressDeleteBtnAction?.Invoke(index);
         }
     }
 }

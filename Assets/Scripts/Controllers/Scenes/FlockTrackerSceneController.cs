@@ -56,6 +56,7 @@ namespace Controllers.Scenes
         private void OpenMainPanel()
         {
             _flockTrackerMainPanel.PressBtnAction += OnReceiveAnswerMainPanel;
+            _flockTrackerMainPanel.OnPressDeleteBtnAction += OnPressDeleteBtn;
             
             _flockTrackerMainPanel.SetInfo(_model.FlockItemModels);
             
@@ -77,12 +78,14 @@ namespace Controllers.Scenes
         private void OnReceiveAnswerMainPanel(int answer)
         {
             _flockTrackerMainPanel.PressBtnAction -= OnReceiveAnswerMainPanel;
+            _flockTrackerMainPanel.OnPressDeleteBtnAction -= OnPressDeleteBtn;
 
             switch (answer)
             {
                 case 0:
                     break;
                 default:
+                    ClosePanel(_flockTrackerMainPanel);
                     OpenAddFlockPanel();
                     break;
             }
@@ -106,6 +109,12 @@ namespace Controllers.Scenes
         private void ClosePanel(PanelView view)
         {
             view.Close();
+        }
+
+        private void OnPressDeleteBtn(int index)
+        {
+            _model.DeleteFlockItem(index);
+            _flockTrackerMainPanel.SetInfo(_model.FlockItemModels);
         }
     }
 }

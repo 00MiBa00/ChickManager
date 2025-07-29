@@ -7,7 +7,7 @@ namespace Models.FlockTracker
     public class FlockItemModel
     {
         public int _count;
-        private int _breedTypeId = 0;
+        public int _breedTypeId = 0;
 
         public BreedsChickensType BreedType
         {
