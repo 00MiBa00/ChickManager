@@ -1,4 +1,5 @@
 using Models.Scenes;
+using Types;
 using UnityEngine;
 using Views.General;
 using Views.Reminder;
@@ -93,6 +94,7 @@ namespace Controllers.Scenes
             {
                 case 0:
                     CloseMainPanel();
+                    base.LoadScene(SceneType.MenuScene);
                     break;
                 case 1:
                     CloseMainPanel();

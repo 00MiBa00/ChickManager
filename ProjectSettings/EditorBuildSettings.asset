@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ReminderScene.unity
+    guid: 57dde12384aaa46d4867d2e5132ed481
+  - enabled: 1
+    path: Assets/Scenes/FlockTrackerScene.unity
+    guid: afb3c17df2e6248b384eda8ca65d9c54
+  - enabled: 1
+    path: Assets/Scenes/FeedWaterScene.unity
+    guid: 188a08a29c2e24e21ab5e7cfe194c85a
+  - enabled: 1
+    path: Assets/Scenes/EggsScene.unity
+    guid: 4da21c65cf0474043860bdfadb6c9470
   m_configObjects: {}

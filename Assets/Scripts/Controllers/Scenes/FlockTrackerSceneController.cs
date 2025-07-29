@@ -1,5 +1,6 @@
 using UnityEngine;
 using Models.Scenes;
+using Types;
 using Views.FlockTracker;
 using Views.General;
 
@@ -83,6 +84,7 @@ namespace Controllers.Scenes
             switch (answer)
             {
                 case 0:
+                    base.LoadScene(SceneType.MenuScene);
                     break;
                 default:
                     ClosePanel(_flockTrackerMainPanel);
