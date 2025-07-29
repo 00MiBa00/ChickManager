@@ -1,6 +1,7 @@
 using Types;
 using UnityEngine;
 using UnityEngine.UI;
+using Views.General;
 
 namespace Controllers.Scenes
 {
@@ -11,7 +12,7 @@ namespace Controllers.Scenes
         [SerializeField] private Button _feedWaterBtn;
         [SerializeField] private Button _eggsBtn;
         [SerializeField] private Button _privacyBtn;
-        
+        [SerializeField] private PanelView _privacyPanel;
         protected override void OnSceneEnable()
         {
             
@@ -38,6 +39,7 @@ namespace Controllers.Scenes
             _reminderBtn.onClick.AddListener(OnPressReminderBtn);
             _feedWaterBtn.onClick.AddListener(OnPressFeedWaterBtn);
             _eggsBtn.onClick.AddListener(OnPressEggsBtn);
+            _privacyBtn.onClick.AddListener(OpenPrivacyPanel);
         }
 
         protected override void Unsubscribe()
@@ -46,6 +48,7 @@ namespace Controllers.Scenes
             _reminderBtn.onClick.RemoveAllListeners();
             _feedWaterBtn.onClick.RemoveAllListeners();
             _eggsBtn.onClick.RemoveAllListeners();
+            _privacyBtn.onClick.RemoveAllListeners();
         }
 
         private void OnPressFlockTrackerBtn()
@@ -66,6 +69,18 @@ namespace Controllers.Scenes
         private void OnPressEggsBtn()
         {
             base.LoadScene(SceneType.EggsScene);
+        }
+
+        private void OpenPrivacyPanel()
+        {
+            _privacyPanel.PressBtnAction += OnReceiveAnswerPrivacyPanel;
+            _privacyPanel.Open();
+        }
+
+        private void OnReceiveAnswerPrivacyPanel(int answer)
+        {
+            _privacyPanel.PressBtnAction -= OnReceiveAnswerPrivacyPanel;
+            _privacyPanel.Close();
         }
     }
 }
