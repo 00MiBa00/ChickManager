@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "109243778168",
+    "project_id": "chickmanager-812c6",
+    "storage_bucket": "chickmanager-812c6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109243778168:ios:77235c78332c456eb7598d",
+        "android_client_info": {
+          "package_name": "com.mycomqsc.ghnbjlk.jhgb"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpW4ceoyhIqxfUuldzKBgwDA4sn8JdBuc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
