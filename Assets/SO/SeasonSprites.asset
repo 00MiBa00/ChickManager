@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f34bbf0c37f43ae9707425c06fd11a, type: 3}
+  m_Name: SeasonSprites
+  m_EditorClassIdentifier: 
+  winter: {fileID: 21300000, guid: 7abf278ee96be484fa36947e4fbb21d9, type: 3}
+  spring: {fileID: 21300000, guid: 29f4ea27c01c84ca797874063fed794c, type: 3}
+  summer: {fileID: 21300000, guid: 27d8a7844d9764ea288d2e0150eaac94, type: 3}
+  autumn: {fileID: 21300000, guid: 8ec21bb5d34924c769af95c8bcd15e9b, type: 3}
