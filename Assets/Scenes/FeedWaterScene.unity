@@ -1091,8 +1091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e0836805e314d6eb92d8f771f69eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bgImage: {fileID: 0}
-  _sprites: {fileID: 0}
+  _bgImage: {fileID: 1965195287}
+  _sprites: {fileID: 11400000, guid: 6ad33138f8c9441b2885e97f9e532117, type: 2}
   _feedInputField: {fileID: 85839385}
   _waterInputField: {fileID: 1717678163}
   _chickenCountInputField: {fileID: 1114586893}
