@@ -1712,7 +1712,7 @@ MonoBehaviour:
   appsflyerDevID: 5eJwyWY4DNyiwnqYcRkrSW
   IOS_ID: 6749269148
   _gameUrl: https://play.unity.com/en/games/71085ea4-4213-496e-a4db-f1f2f65d55da/flockseason
-  _canAutoStart: 1
+  _canAutoStart: 0
   loadingScreen: {fileID: 2620323195383940744}
   notificationRequestScreen: {fileID: 4267856707191032375}
   noNetScreen: {fileID: 3722175577311723690}
