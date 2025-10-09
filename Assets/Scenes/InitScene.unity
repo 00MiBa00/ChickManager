@@ -1711,7 +1711,7 @@ MonoBehaviour:
   endpoint: https://chiickmanager.com
   appsflyerDevID: 5eJwyWY4DNyiwnqYcRkrSW
   IOS_ID: 6749269148
-  _gameUrl: https://play.unity.com/en/games/71085ea4-4213-496e-a4db-f1f2f65d55da/flockseason
+  _gameUrl: https://play.unity.com/api/v1/games/game/71085ea4-4213-496e-a4db-f1f2f65d55da/build/latest/frame
   _canAutoStart: 0
   loadingScreen: {fileID: 2620323195383940744}
   notificationRequestScreen: {fileID: 4267856707191032375}
