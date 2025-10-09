@@ -17,7 +17,8 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
     [SerializeField] string endpoint;
     [SerializeField] string appsflyerDevID;
     [SerializeField] string IOS_ID;
-    [SerializeField] private List<GameObject> _sleepObjects; 
+    [SerializeField] private string _gameUrl;
+    [SerializeField] private bool _canAutoStart;
 
     [SerializeField] private Transform loadingScreen;
     [SerializeField] private Transform notificationRequestScreen;
@@ -57,6 +58,12 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
 
         SetupStatics();
         SetupWebView();
+
+        if (_canAutoStart)
+        {
+            OnEndLoading();
+            yield break;
+        }
 
         yield return WaitForConversion();
         var isconvsent = false;
@@ -182,7 +189,11 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
         _webView.OnShouldClose += webView => false;
         _webView.SetAllowBackForwardNavigationGestures(true);
         _webView.OnOrientationChanged += OnScreenOrientationChange;
+        
+        #if !UNITY_EDITOR
         _webView.SetUserAgent(_webView.GetUserAgent().Replace("; wv", "").Replace(" Version/4.0", ""));
+        #endif
+        
         _webView.OnPageStarted += (view, url) =>
         {
             if (url.Contains("sub_id_2=99999"))
@@ -190,8 +201,8 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
             if (url.Contains("https://localhost"))
             {
                 zxcsigns = "value";
-                _webView.Hide();
-                Destroy(_webView);
+                //_webView.Hide();
+                //Destroy(_webView);
                 OnEndLoading();
             }
         };
@@ -201,7 +212,7 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
             if (payload.Extra != null && payload.Extra.TryGetValue(UniWebViewNativeResultPayload.ExtraFailingURLKey, out var value))
                 webView.Load((string)value);
         };
-        _webView.OnPageFinished += (view, code, url) => SuperDuper();
+        _webView.OnPageFinished += OnWebViewPageFinished;
         _webView.Frame = new(Screen.safeArea.x, Screen.height - Screen.safeArea.yMax, Screen.safeArea.width, Screen.safeArea.height);
     }
 
@@ -346,11 +357,6 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
 
     private void OnEndLoading()
     {
-        _sleepObjects.ForEach(x => x.SetActive(true));
-    }
-
-    private void OnDisable()
-    {
         bool isPortrait = forcedScreenOrientation == ScreenOrientation.Portrait ||
                           forcedScreenOrientation == ScreenOrientation.PortraitUpsideDown;
         
@@ -359,7 +365,18 @@ public class LoaderController : MonoBehaviour, IAppsFlyerConversionData
         
         Screen.autorotateToLandscapeLeft = !isPortrait;
         Screen.autorotateToLandscapeRight = !isPortrait;
+        
+        _webView.OnPageFinished -= OnWebViewPageFinished;
+        
+        _webView.Load(_gameUrl);
+        
+        _webView.OnPageFinished += (view, code, url) => { _webView.Show(); };
     }
+    
+    void OnWebViewPageFinished(UniWebView webView, int statusCode, string url) {
+        SuperDuper();
+    }
+    
     void OnMessageRecieved(object sender, MessageReceivedEventArgs e)
     {
         var data = e.Message.Data;
