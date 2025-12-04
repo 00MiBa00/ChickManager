@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,7 +573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 930c3c5d6891f43c2b08279a2a7c975b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da24cb19511f74571b2ba434ab456acd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -627,7 +626,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 105}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 276.42856, y: 49.285713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1723484266769120286
 RectTransform:
@@ -948,8 +947,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c535826e926ae426584073e2f528aa5e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 55ac36c9cfcef467ba34e4cc08a16936, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1115,7 +1114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 030d0fbc49a884ea5aaa9b162eb25876, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58f10646b76554bd08ad0486cf4ee41b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1138,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.11372549, g: 0.3529412, b: 0.6627451, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1255,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7a46fd9cb2a24ee9b72bdeb69c1a7e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2101b9bca1cc455aa67c21b3725107e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1385,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 030d0fbc49a884ea5aaa9b162eb25876, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c535826e926ae426584073e2f528aa5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1528,9 +1527,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7a46fd9cb2a24ee9b72bdeb69c1a7e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2101b9bca1cc455aa67c21b3725107e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1551,7 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1598,6 +1597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5becfe8e5cb174004913f69c31bd75df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 8185618230225567971}
+  _fadeDuration: 1
+  _totalTime: 20
+  _targetAlpha: 0
 --- !u!114 &6694557851921024718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f61a590b1a03412b87316b12f0fec57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 664530f7987f2453d82c5ed815dcc2d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1685,7 +1688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6dcefaa535087439a92110baaecd78c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58f10646b76554bd08ad0486cf4ee41b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1708,10 +1711,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcedScreenOrientation: 1
-  endpoint: https://chiickmanager.com
-  appsflyerDevID: 5eJwyWY4DNyiwnqYcRkrSW
-  IOS_ID: 6749269148
-  _gameUrl: https://play.unity.com/api/v1/games/game/71085ea4-4213-496e-a4db-f1f2f65d55da/build/latest/frame
+  endpoint: https://journeyofthechickenchef.com
+  appsflyerDevID: bEkBBbpzLhwEAR59XKY8CS
+  IOS_ID: 6756112833
+  _gameUrl: https://play.unity.com/api/v1/games/game/c35d463b-845e-4456-ab84-4c5a734d2ac8/build/latest/frame
   _canAutoStart: 0
   loadingScreen: {fileID: 2620323195383940744}
   notificationRequestScreen: {fileID: 4267856707191032375}
@@ -1791,7 +1794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4236685edfb1d4b44a8f9b29ede9a641, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9045de723243442be9970a22f360dbda, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
