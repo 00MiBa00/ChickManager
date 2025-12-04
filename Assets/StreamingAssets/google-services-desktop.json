@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "109243778168",
-    "project_id": "chickmanager-812c6",
-    "storage_bucket": "chickmanager-812c6.firebasestorage.app"
+    "project_number": "267386911690",
+    "project_id": "journey-of-the-chicken-chef",
+    "storage_bucket": "journey-of-the-chicken-chef.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:109243778168:ios:77235c78332c456eb7598d",
+        "mobilesdk_app_id": "1:267386911690:ios:5d4a2a31611e3e5e092d33",
         "android_client_info": {
-          "package_name": "com.mycomqsc.ghnbjlk.jhgb"
+          "package_name": "com.sherothalavoneparamore.gameghj"
         }
       },
       "api_key": [
         {
-          "current_key": "AIzaSyDpW4ceoyhIqxfUuldzKBgwDA4sn8JdBuc"
+          "current_key": "AIzaSyBGMLwcWhyQlLiXC9wkXwDsyKckSTEotFM"
         }
       ],
       "services": {
