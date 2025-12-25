@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "267386911690",
-    "project_id": "journey-of-the-chicken-chef",
-    "storage_bucket": "journey-of-the-chicken-chef.firebasestorage.app"
+    "project_number": "327312480766",
+    "project_id": "collector-68daf",
+    "storage_bucket": "collector-68daf.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:267386911690:ios:5d4a2a31611e3e5e092d33",
+        "mobilesdk_app_id": "1:327312480766:ios:fef0a2a048dbbf702ac8af",
         "android_client_info": {
-          "package_name": "com.sherothalavoneparamore.gameghj"
+          "package_name": "com.bennett.stacygame"
         }
       },
       "api_key": [
         {
-          "current_key": "AIzaSyBGMLwcWhyQlLiXC9wkXwDsyKckSTEotFM"
+          "current_key": "AIzaSyAIb_Q2StTHQ5K_esJJU-uIGbRa_mn5bNM"
         }
       ],
       "services": {
