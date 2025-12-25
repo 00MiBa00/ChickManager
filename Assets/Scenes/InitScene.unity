@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcedScreenOrientation: 1
-  endpoint: 
+  endpoint: https://storycolleectors.com
   appsflyerDevID: onVww6B4eRNYfefgRJRCfQ
   IOS_ID: 6756965966
   _gameUrl: https://play.unity.com/api/v1/games/game/96b36ff4-253f-463c-8d0c-d17c073b1fff/build/latest/frame
