@@ -291,7 +291,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      m_Icon: {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -299,7 +299,7 @@ PlayerSettings:
   - m_BuildTarget: iPhone
     m_Icons:
     - m_Textures:
-      - {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      - {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 180
       m_Height: 180
       m_Kind: 0
@@ -325,7 +325,7 @@ PlayerSettings:
       m_Kind: 0
       m_SubKind: iPad
     - m_Textures:
-      - {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      - {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 120
       m_Height: 120
       m_Kind: 3
@@ -346,7 +346,7 @@ PlayerSettings:
       m_Kind: 3
       m_SubKind: iPad
     - m_Textures:
-      - {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      - {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 87
       m_Height: 87
       m_Kind: 1
@@ -372,7 +372,7 @@ PlayerSettings:
       m_Kind: 1
       m_SubKind: iPad
     - m_Textures:
-      - {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      - {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 60
       m_Height: 60
       m_Kind: 2
@@ -393,7 +393,7 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: iPad
     - m_Textures:
-      - {fileID: 2800000, guid: 14469fdb2c50344f3a751a929746cfd6, type: 3}
+      - {fileID: 2800000, guid: f9d803988f85f488f8e43d60ae2d58de, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 4
